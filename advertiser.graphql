@@ -1,0 +1,29 @@
+type Order {
+    id: Int!
+    customerName: String!
+    orderAmount: Float!
+    items: [Item!]!
+}
+
+type Item {
+    id: Int!
+    productCode: String!
+    productName: String!
+    quantity: Int!
+}
+
+input OrderInput {
+    customerName: String!
+    orderAmount: Float!
+    items: [ItemInput!]!
+}
+
+input ItemInput {
+    id: Int
+    productCode: String!
+    productName: String!
+    quantity: Int!
+}
+
+
+
